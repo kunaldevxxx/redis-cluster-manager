@@ -1,0 +1,68 @@
+version: '3'
+
+services:
+  redis-node-1:
+    image: redis:7
+    container_name: redis-node-1
+    networks:
+      - redis-cluster
+    volumes:
+      - redis-node-1-data:/data
+    command: redis-server --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000
+
+  redis-node-2:
+    image: redis:7
+    container_name: redis-node-2
+    networks:
+      - redis-cluster
+    volumes:
+      - redis-node-2-data:/data
+    command: redis-server --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000
+
+  redis-node-3:
+    image: redis:7
+    container_name: redis-node-3
+    networks:
+      - redis-cluster
+    volumes:
+      - redis-node-3-data:/data
+    command: redis-server --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000
+
+  redis-node-4:
+    image: redis:7
+    container_name: redis-node-4
+    networks:
+      - redis-cluster
+    volumes:
+      - redis-node-4-data:/data
+    command: redis-server --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000
+
+  redis-node-5:
+    image: redis:7
+    container_name: redis-node-5
+    networks:
+      - redis-cluster
+    volumes:
+      - redis-node-5-data:/data
+    command: redis-server --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000
+
+  redis-node-6:
+    image: redis:7
+    container_name: redis-node-6
+    networks:
+      - redis-cluster
+    volumes:
+      - redis-node-6-data:/data
+    command: redis-server --cluster-enabled yes --cluster-config-file nodes.conf --cluster-node-timeout 5000
+
+networks:
+  redis-cluster:
+    driver: bridge
+
+volumes:
+  redis-node-1-data:
+  redis-node-2-data:
+  redis-node-3-data:
+  redis-node-4-data:
+  redis-node-5-data:
+  redis-node-6-data:
