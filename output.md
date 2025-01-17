@@ -1,4 +1,5 @@
-kunaldevxx@DESKTOP-EGLMUK9:/mnt/wsl/docker-desktop-bind-mounts/Ubuntu/af129b6ec6d4ebbbbf235c089f9a62e82e6edce3e5cb5292f36b7bb4a2627923$ ./create_and_delete_keys.sh 
+```bash
+$ ./create_and_delete_keys.sh 
 2025-01-17 06:01:48 - Resetting all Redis nodes...
 OK
 OK
@@ -139,7 +140,7 @@ your-prefix-id:9
 2025-01-17 06:02:09 - Deleting key your-prefix-id:1 on redis-node-6 (172.21.0.2)
 1
 2025-01-17 06:02:09 - Deleted key: your-prefix-id:1 on redis-node-6
-2025-01-17 06:02:09 - Deleting key your-prefix-id:10 on redis-node-5 (172.21.0.4)
+2025-01-17 06:02:10 - Deleting key your-prefix-id:10 on redis-node-5 (172.21.0.4)
 1
 2025-01-17 06:02:10 - Deleted key: your-prefix-id:10 on redis-node-5
 2025-01-17 06:02:10 - Deleting key your-prefix-id:9 on redis-node-2 (172.21.0.7)
